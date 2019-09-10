@@ -1,32 +1,50 @@
+
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0px;
-
+    margin: 0 auto;
+    background-color: #667a9c;
+    height: 150px;
 }
 
-.menu {
-    display: flex;
+nav ul {
+    position: relative;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+
+nav ul li:hover > ul {
+    display:block;
+    list-style-type: none;
+}
+
+nav ul ul ul li {
+    float:none;
+    position: relative;
+    top: -70px;
+    right: -125px;
+}
+.dropdownLink {
     padding: 0;
     margin: 0;
-    list-style: none;
+    list-style-type: none;
+    font-size: 35px;
 }
 
-.menu__item {
-    font-size: 40px;
-}
-.menu__item:not(:last-child) {
-    margin-right: 35px;
+.dropdownLink::after {
+    content:  ' ⇩';
 }
 
-.menu__item > ul > li {
-    text-decoration: none;
-}
+.innerItem {
+    background-color: white;
+    list-style-type: none;
+    font-size: 30px;
 
-.menu__item:hover > ul {
-    display: block;
 }
-
 
